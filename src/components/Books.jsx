@@ -18,18 +18,19 @@ function Books() {
           <div className="border border-1 p-4">
             <Link to={`/books/${b.id}`}>
               <img src={bookphoto} alt="" />
+
+              <div className="text-center space-y-2">
+                <h1>{b.title}</h1>
+                <p>{b.description}</p>
+              </div>
+              <div className="flex flex-wrap">
+                {b.categories.map((genre) => (
+                  <span className="mx-1 my-1 text-sm bg-blue-600 text-white py-1 px-1 rounded-full">
+                    {genre}
+                  </span>
+                ))}
+              </div>
             </Link>
-            <div className="text-center space-y-2">
-              <h1>{b.title}</h1>
-              <p>{b.description}</p>
-            </div>
-            <div className="flex flex-wrap">
-              {b.categories.map((genre) => (
-                <span className="mx-1 my-1 text-sm bg-blue-600 text-white py-1 px-1 rounded-full">
-                  {genre}
-                </span>
-              ))}
-            </div>
           </div>
         ))}
     </div>

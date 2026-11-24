@@ -19,14 +19,16 @@ function BookDetail() {
           </div>
           <div className="space-y-3">
             <h1 className="text-3xl  font-bold">{book.title}</h1>
-            {book.categories.map((genere) => (
-              <span
-                className="bg-blue-500 text-sm rounded-full px-2 py-1 text-white
-                mx-1"
-              >
-                {genere}
-              </span>
-            ))}
+            {book.categories &&
+              book.categories.map((genere) => (
+                <span
+                  className="bg-blue-500 text-sm rounded-full px-2 py-1 text-white
+              mx-1"
+                  key={genere}
+                >
+                  {genere}
+                </span>
+              ))}
             <p>{book.description}</p>
           </div>
         </div>
