@@ -1,25 +1,48 @@
 {
   "Books": [
     {
-      "id": 1,
+      "id": "1",
       "title": "Web Devlopement",
       "description": "Best Js Book",
-      "categories": ["React", "JavaScript", "WebDevlopement"],
+      "categories": [
+        "React",
+        "JavaScript",
+        "WebDevlopement"
+      ],
       "intro": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus excepturi provident eligendi, assumenda quod sunt velit est repellat similique quia cumque illum perspiciatis recusandae iure aut dolorum quos! Iusto dolore non quam mollitia, harum unde aspernatur, voluptas id libero minima facilis similique deserunt ullam expedita voluptatibus, reprehenderit obcaecati earum nesciunt molestias ipsa illo vel soluta ex! Eos perferendis autem perspiciatis est id, deserunt, qui nobis illum voluptates quam corporis accusantium culpa? Excepturi facilis dolorum quia sequi in tenetur molestiae quas ipsa tempore adipisci. Molestiae similique earum, dolore vero pariatur ullam!"
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "Programming",
       "description": "Best Js Book",
-      "categories": ["Vue", "JavaScript", "WebDevlopement"],
+      "categories": [
+        "Vue",
+        "JavaScript",
+        "WebDevlopement"
+      ],
       "intro": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus excepturi provident eligendi, assumenda quod sunt velit est repellat similique quia cumque illum perspiciatis recusandae iure aut dolorum quos! Iusto dolore non quam mollitia, harum unde aspernatur, voluptas id libero minima facilis similique deserunt ullam expedita voluptatibus, reprehenderit obcaecati earum nesciunt molestias ipsa illo vel soluta ex! Eos perferendis autem perspiciatis est id, deserunt, qui nobis illum voluptates quam corporis accusantium culpa? Excepturi facilis dolorum quia sequi in tenetur molestiae quas ipsa tempore adipisci. Molestiae similique earum, dolore vero pariatur ullam!"
     },
     {
-      "id": 3,
+      "id": "3",
       "title": "Web Devlopement",
       "description": "Best PHP Book",
-      "categories": ["Laravel", "Php", "WebDevlopement"],
+      "categories": [
+        "Laravel",
+        "Php",
+        "WebDevlopement"
+      ],
       "intro": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus excepturi provident eligendi, assumenda quod sunt velit est repellat similique quia cumque illum perspiciatis recusandae iure aut dolorum quos! Iusto dolore non quam mollitia, harum unde aspernatur, voluptas id libero minima facilis similique deserunt ullam expedita voluptatibus, reprehenderit obcaecati earum nesciunt molestias ipsa illo vel soluta ex! Eos perferendis autem perspiciatis est id, deserunt, qui nobis illum voluptates quam corporis accusantium culpa? Excepturi facilis dolorum quia sequi in tenetur molestiae quas ipsa tempore adipisci. Molestiae similique earum, dolore vero pariatur ullam!"
+    },
+    {
+      "title": "What is Javascript",
+      "description": "JavaScript is most powerful language",
+      "categories": [
+        "react",
+        "javascript",
+        "js"
+      ],
+      "id": "QLkTeAd-wJc"
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

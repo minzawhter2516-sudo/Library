@@ -15,7 +15,7 @@ function Books() {
       {loading && <p>loading...</p>}
       {book &&
         book.map((b) => (
-          <div className="border border-1 p-4">
+          <div className="border border-1 p-4" key={b.id}>
             <Link to={`/books/${b.id}`}>
               <img src={bookphoto} alt="" />
 
@@ -25,7 +25,10 @@ function Books() {
               </div>
               <div className="flex flex-wrap">
                 {b.categories.map((genre) => (
-                  <span className="mx-1 my-1 text-sm bg-blue-600 text-white py-1 px-1 rounded-full">
+                  <span
+                    className="mx-1 my-1 text-sm bg-blue-600 text-white py-1 px-1 rounded-full"
+                    key={genre}
+                  >
                     {genre}
                   </span>
                 ))}

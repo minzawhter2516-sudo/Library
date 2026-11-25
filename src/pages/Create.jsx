@@ -1,17 +1,41 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import useFetch from "../hooks/useFetch";
+import { useNavigate } from "react-router-dom";
 
 function Create() {
+  const navigate = useNavigate();
   const [title, setTitle] = useState("");
-  const [description, serDescription] = useState("");
+  const [description, setDescription] = useState("");
   const [category, setCategory] = useState("");
-  const [categories, setCategories] = useState(["HTML", "CSS"]);
-  const addCategory = (e) => {
-    e.preventDefault();
+  const [categories, setCategories] = useState([]);
+  const { setPostData, data: book } = useFetch(
+    "http://localhost:3000/Books",
+    "POST",
+  );
+  const addCategory = () => {
     setCategories((prev) => [category, ...prev]);
     setCategory("");
   };
+  let createBook = (e) => {
+    e.preventDefault();
+    let data = {
+      title,
+      description,
+      categories,
+    };
+    setTitle("");
+    setDescription("");
+    setCategories([]);
+    setPostData(data);
+    if (book) {
+      navigate("/");
+    }
+  };
+  useEffect(() => {
+    console.log(book);
+  }, [book]);
   return (
-    <form className="w-full max-w-lg mx-auto">
+    <form className="w-full max-w-lg mx-auto" onSubmit={createBook}>
       <h1 className="text-3xl font-bold text-blue-600 text-center">
         Book create form
       </h1>
@@ -40,7 +64,7 @@ function Create() {
             id="grid-password"
             type="text"
             value={description}
-            onChange={(e) => serDescription(e.target.value)}
+            onChange={(e) => setDescription(e.target.value)}
             placeholder="book description"
           ></textarea>
         </div>
